@@ -1,0 +1,223 @@
+backend:
+  name: github
+  # GANTI dengan username dan nama repositori Anda (contoh: sekolahnama/materi-web)
+  repo: username-anda/nama-repo-anda 
+  branch: main
+
+# Pengaturan lokasi penyimpanan gambar atau file yang diunggah guru
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  # ==========================================
+  # MATERI KELAS 7
+  # ==========================================
+  - name: "k7_agama"
+    label: "Kelas 7 - Pendidikan Agama Islam"
+    folder: "materi/kelas7/agama"
+    create: true
+    # Blok 'fields' ini sekaligus dijadikan template dasar (anchor) 
+    # untuk dipakai di semua mata pelajaran di bawahnya
+    fields: &fields_template
+      - {label: "Judul Materi", name: "title", widget: "string"}
+      - {label: "Nama Guru", name: "author", widget: "string"}
+      - {label: "Upload File Materi (Bisa PDF atau HTML)", name: "file_materi", widget: "file", required: false, hint: "Gunakan ini jika guru ingin mengunggah file langsung."}
+      - {label: "Isi Materi (Ketik/Paste dari Word)", name: "body", widget: "markdown", required: false, hint: "Gunakan ini jika guru ingin mengetik atau copy-paste materi."}
+
+  - name: "k7_pancasila"
+    label: "Kelas 7 - Pendidikan Pancasila"
+    folder: "materi/kelas7/pancasila"
+    create: true
+    fields: *fields_template
+
+  - name: "k7_bindo"
+    label: "Kelas 7 - Bahasa Indonesia"
+    folder: "materi/kelas7/bindo"
+    create: true
+    fields: *fields_template
+
+  - name: "k7_mtk"
+    label: "Kelas 7 - Matematika"
+    folder: "materi/kelas7/matematika"
+    create: true
+    fields: *fields_template
+
+  - name: "k7_ipa"
+    label: "Kelas 7 - IPA"
+    folder: "materi/kelas7/ipa"
+    create: true
+    fields: *fields_template
+
+  - name: "k7_ips"
+    label: "Kelas 7 - IPS"
+    folder: "materi/kelas7/ips"
+    create: true
+    fields: *fields_template
+
+  - name: "k7_binggris"
+    label: "Kelas 7 - Bahasa Inggris"
+    folder: "materi/kelas7/binggris"
+    create: true
+    fields: *fields_template
+
+  - name: "k7_pjok"
+    label: "Kelas 7 - PJOK"
+    folder: "materi/kelas7/pjok"
+    create: true
+    fields: *fields_template
+
+  - name: "k7_informatika"
+    label: "Kelas 7 - Informatika"
+    folder: "materi/kelas7/informatika"
+    create: true
+    fields: *fields_template
+
+  - name: "k7_senbud"
+    label: "Kelas 7 - Seni Budaya"
+    folder: "materi/kelas7/senbud"
+    create: true
+    fields: *fields_template
+
+  - name: "k7_bjawa"
+    label: "Kelas 7 - Bahasa Jawa"
+    folder: "materi/kelas7/bjawa"
+    create: true
+    fields: *fields_template
+
+  # ==========================================
+  # MATERI KELAS 8
+  # ==========================================
+  - name: "k8_agama"
+    label: "Kelas 8 - Pendidikan Agama Islam"
+    folder: "materi/kelas8/agama"
+    create: true
+    fields: *fields_template
+
+  - name: "k8_pancasila"
+    label: "Kelas 8 - Pendidikan Pancasila"
+    folder: "materi/kelas8/pancasila"
+    create: true
+    fields: *fields_template
+
+  - name: "k8_bindo"
+    label: "Kelas 8 - Bahasa Indonesia"
+    folder: "materi/kelas8/bindo"
+    create: true
+    fields: *fields_template
+
+  - name: "k8_mtk"
+    label: "Kelas 8 - Matematika"
+    folder: "materi/kelas8/matematika"
+    create: true
+    fields: *fields_template
+
+  - name: "k8_ipa"
+    label: "Kelas 8 - IPA"
+    folder: "materi/kelas8/ipa"
+    create: true
+    fields: *fields_template
+
+  - name: "k8_ips"
+    label: "Kelas 8 - IPS"
+    folder: "materi/kelas8/ips"
+    create: true
+    fields: *fields_template
+
+  - name: "k8_binggris"
+    label: "Kelas 8 - Bahasa Inggris"
+    folder: "materi/kelas8/binggris"
+    create: true
+    fields: *fields_template
+
+  - name: "k8_pjok"
+    label: "Kelas 8 - PJOK"
+    folder: "materi/kelas8/pjok"
+    create: true
+    fields: *fields_template
+
+  - name: "k8_informatika"
+    label: "Kelas 8 - Informatika"
+    folder: "materi/kelas8/informatika"
+    create: true
+    fields: *fields_template
+
+  - name: "k8_senbud"
+    label: "Kelas 8 - Seni Budaya"
+    folder: "materi/kelas8/senbud"
+    create: true
+    fields: *fields_template
+
+  - name: "k8_bjawa"
+    label: "Kelas 8 - Bahasa Jawa"
+    folder: "materi/kelas8/bjawa"
+    create: true
+    fields: *fields_template
+
+  # ==========================================
+  # MATERI KELAS 9
+  # ==========================================
+  - name: "k9_agama"
+    label: "Kelas 9 - Pendidikan Agama Islam"
+    folder: "materi/kelas9/agama"
+    create: true
+    fields: *fields_template
+
+  - name: "k9_pancasila"
+    label: "Kelas 9 - Pendidikan Pancasila"
+    folder: "materi/kelas9/pancasila"
+    create: true
+    fields: *fields_template
+
+  - name: "k9_bindo"
+    label: "Kelas 9 - Bahasa Indonesia"
+    folder: "materi/kelas9/bindo"
+    create: true
+    fields: *fields_template
+
+  - name: "k9_mtk"
+    label: "Kelas 9 - Matematika"
+    folder: "materi/kelas9/matematika"
+    create: true
+    fields: *fields_template
+
+  - name: "k9_ipa"
+    label: "Kelas 9 - IPA"
+    folder: "materi/kelas9/ipa"
+    create: true
+    fields: *fields_template
+
+  - name: "k9_ips"
+    label: "Kelas 9 - IPS"
+    folder: "materi/kelas9/ips"
+    create: true
+    fields: *fields_template
+
+  - name: "k9_binggris"
+    label: "Kelas 9 - Bahasa Inggris"
+    folder: "materi/kelas9/binggris"
+    create: true
+    fields: *fields_template
+
+  - name: "k9_pjok"
+    label: "Kelas 9 - PJOK"
+    folder: "materi/kelas9/pjok"
+    create: true
+    fields: *fields_template
+
+  - name: "k9_informatika"
+    label: "Kelas 9 - Informatika"
+    folder: "materi/kelas9/informatika"
+    create: true
+    fields: *fields_template
+
+  - name: "k9_senbud"
+    label: "Kelas 9 - Seni Budaya"
+    folder: "materi/kelas9/senbud"
+    create: true
+    fields: *fields_template
+
+  - name: "k9_bjawa"
+    label: "Kelas 9 - Bahasa Jawa"
+    folder: "materi/kelas9/bjawa"
+    create: true
+    fields: *fields_template
